@@ -33,12 +33,15 @@ function Net() {
     const centerx = 500;
     const centery = 400;
 
-    const response = await fetch("https://goodday-back.onrender.com/api/ia/net", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      credentials: "include",
-      body: JSON.stringify({ text }),
-    });
+    const response = await fetch(
+      "https://goodday-back.onrender.com/api/ia/net",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({ text }),
+      },
+    );
 
     const data = await response.json();
     const dataArray = JSON.parse(data.message.content);
@@ -234,7 +237,7 @@ function Net() {
           <div className="absolute -top-20 h-80 w-80 rounded-full bg-red-900/30 blur-3xl" />
 
           <img
-            src="/conffeti.gif"
+            src={`${import.meta.env.BASE_URL}conffeti.gif`}
             width="1000px"
             height="1000px"
             className="absolute z-20 pointer-events-none opacity-80"

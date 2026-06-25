@@ -20,7 +20,11 @@ function Node({ data }) {
           }}
           className="relative rounded-xl w-fit text-[30px] text-white bg-black p-2"
         >
-          <img className="absolute bottom-0" src="/bubble.gif" alt="" />
+          <img
+            className="absolute bottom-0"
+            src={`${import.meta.env.BASE_URL}bubble.gif`}
+            alt=""
+          />
 
           <Handle type="target" position={Position.Top} />
           {data.label}

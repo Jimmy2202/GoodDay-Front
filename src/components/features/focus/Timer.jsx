@@ -143,7 +143,7 @@ function Timer() {
             animate={{ opacity: 1, scale: 2 }}
             transition={{ duration: 4 }}
             key="timer"
-            src="/circle.gif"
+            src={`${import.meta.env.BASE_URL}circle.gif`}
             width="100px"
             height="100px"
             alt=""
