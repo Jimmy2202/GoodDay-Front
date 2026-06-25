@@ -16,7 +16,9 @@ function Login() {
     if (params.get("verified") === "true") {
       setMessageLogin("✅ Conta verificada com sucesso. Faça login.");
     } else if (params.get("verified") === "false") {
-      setMessageLogin("Conta ainda não verificada, cheque o email!");
+      setMessageLogin(
+        "Conta ainda não verificada, cheque o email(cheque também o spam)!",
+      );
     } else {
       setMessageLogin("");
     }
